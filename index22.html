@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <link rel="stylesheet" href="index22b.css">
+    <script>
+        function validateForm() {
+            const name = document.getElementById("First-Name").value;
+            const email = document.getElementById("email-ID").value;
+            if (name === "" || email === "") {
+                alert("Name and email-ID Should not be Empty");
+                return false;
+            } else {
+                alert("Form submitted successfully!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="marquee">STUDENT REGISTRATION FORM</div>
+        <br><br>
+    <br>
+    <form action="" onsubmit="return validateForm()" id="myform">
+        <h2>Basic Information</h2>
+        <label>Name of the Student</label>
+        <br>
+        <input id="First-Name" placeholder="First Name" type="text">  
+        <input id="Middle-Name" placeholder="Middle Name" type="text">  
+        <input id="Last-Name" placeholder="Last Name" type="text">   
+        <br><br>
+        <label>USN</label> <br>
+        <input id="Register-number" placeholder="ex:2JR21CS416" type="text" required>  
+        <br><br>
+        <label>Degree Program</label> <br>
+        <input id="Degree-Program" placeholder="Department" type="text" required>  
+        <br><br>
+        <label>Email-id</label><br>
+        <input id="email-ID" placeholder="ex:myname@example.com" type="email">
+        <br><br>
+        <label>Student Phone Number</label><br> 
+        <input id="Student-Contact-Number" placeholder="ex:965333656" type="tel">
+        <br><br>
+        <label>College Name</label><br> 
+        <input id="Enter-college-name" placeholder="College name" type="text">
+        <br><br>
+        <label>Upload[Student Photo]</label><br>
+        <input id="img" placeholder="Upload[Student Photo]" type="file">
+        <br><br>
+        <label>Student Password</label><br>
+        <input id="password" placeholder="Please Enter correct Password" type="password" required>
+        <br><br>
+        <button type="submit">Submit</button>
+        <br><br>
+    </form>
+</body>
+</html>
